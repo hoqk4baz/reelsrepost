@@ -1,0 +1,38 @@
+let obj = JSON.parse($response.body);
+obj={
+  "request_date": "2022-10-13T23:47:31Z",
+  "request_date_ms": 1665704851908,
+  "subscriber": {
+    "entitlements": {
+      "pro": {
+        "expires_date": "2099-10-16T23:20:52Z",
+        "grace_period_expires_date": null,
+        "product_identifier": "co.appside.inforce.weekly",
+        "purchase_date": "2022-10-13T23:20:52Z"
+      }
+    },
+    "first_seen": "2022-10-13T22:33:49Z",
+    "last_seen": "2022-10-13T22:33:49Z",
+    "management_url": "https://apps.apple.com/account/subscriptions",
+    "non_subscriptions": {},
+    "original_app_user_id": "$RCAnonymousID:8d7bc110d0724093bfb6675d46ee47d9",
+    "original_application_version": "437",
+    "original_purchase_date": "2022-10-13T22:33:32Z",
+    "other_purchases": {},
+    "subscriptions": {
+      "co.appside.inforce.weekly": {
+        "billing_issues_detected_at": null,
+        "expires_date": "2099-10-16T23:20:52Z",
+        "grace_period_expires_date": null,
+        "is_sandbox": false,
+        "original_purchase_date": "2022-10-13T23:20:53Z",
+        "ownership_type": "PURCHASED",
+        "period_type": "trial",
+        "purchase_date": "2022-10-13T23:20:52Z",
+        "store": "app_store",
+        "unsubscribe_detected_at": null
+      }
+    }
+  }
+}
+$done({body: JSON.stringify(obj)});
